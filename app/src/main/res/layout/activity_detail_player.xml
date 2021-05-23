@@ -1,130 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
-    android:paddingRight="16dp"
     android:paddingTop="10dp"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".PlayerListActivity"
-    >
+    android:paddingRight="16dp"
+    tools:context=".PlayerListActivity">
 
 
-    <ImageView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="366dp"
+        android:layout_height="283dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
-        android:id="@+id/imageViewDetail1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:layout_marginLeft="16dp"
-
-        android:id="@+id/textViewDetail1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="first name :"
-        android:layout_toRightOf="@+id/imageViewDetail1"
-        />
-
-    <TextView
-        android:layout_marginLeft="16dp"
-        android:id="@+id/textViewDetail2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="last name :"
-        android:layout_below="@+id/textViewDetail1"
-        android:layout_toRightOf="@+id/imageViewDetail1"
-
-        />
-
-    <TextView
-        android:layout_marginLeft="16dp"
-        android:id="@+id/textViewDetail3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="team : "
-        android:layout_below="@+id/textViewDetail2"
-        android:layout_toRightOf="@+id/imageViewDetail1"
-        />
-    <TextView
-        android:layout_marginLeft="60dp"
-        android:id="@+id/textViewDetail4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="postion : "
-        android:layout_toRightOf="@+id/textViewDetail1"
-        />
-    <TextView
-        android:layout_marginLeft="60dp"
-        android:id="@+id/textViewDetail5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="height : "
-        android:layout_toRightOf="@+id/textViewDetail1"
-        android:layout_below="@+id/textViewDetail1"
-        />
-    <TextView
-        android:layout_marginLeft="60dp"
-        android:id="@+id/textViewDetail11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="weight : "
-        android:layout_toRightOf="@+id/textViewDetail1"
-        android:layout_below="@+id/textViewDetail2"
-        />
-    <RelativeLayout
-        android:layout_width="40mm"
-        android:layout_height="50mm"
-        android:layout_below="@+id/imageViewDetail1"
-        android:gravity="center_vertical">
-
-        >
         <TextView
-            android:layout_marginTop="16dp"
+
+            android:id="@+id/textViewDetail1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="44dp"
+            android:layout_marginLeft="44dp"
+            android:layout_marginBottom="12dp"
+            android:text="first name :"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDetail11"
+            app:layout_constraintStart_toEndOf="@+id/imageViewDetail1" />
+
+        <TextView
+            android:id="@+id/textViewDetail2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageViewDetail1"
+            android:text="last name :"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDetail1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.275"
+            app:layout_constraintStart_toEndOf="@+id/imageViewDetail1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.858" />
+
+        <TextView
+            android:id="@+id/textViewDetail3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewDetail2"
+            android:layout_marginBottom="12dp"
+            android:layout_toRightOf="@+id/imageViewDetail1"
+            android:text="team : "
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDetail2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.247"
+            app:layout_constraintStart_toEndOf="@+id/imageViewDetail1" />
+
+        <TextView
+            android:id="@+id/textViewDetail4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="postion : "
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDetail5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.269"
+            app:layout_constraintStart_toEndOf="@+id/imageViewDetail1" />
+
+        <TextView
+            android:id="@+id/textViewDetail11"
+            android:layout_width="76dp"
+            android:layout_height="26dp"
+            android:layout_marginBottom="20dp"
+            android:text="weight : "
+
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDetail4"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintHorizontal_bias="0.302"
+            app:layout_constraintStart_toEndOf="@+id/imageViewDetail1" />
+
+        <ImageView
+
+            android:id="@+id/imageViewDetail1"
+            android:layout_width="98dp"
+            android:layout_height="234dp"
+            android:src="@drawable/player"
+            android:textColor="@color/black"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="33dp" />
+
+        <TextView
+            android:id="@+id/textViewDetail5"
+            android:layout_width="124dp"
+            android:layout_height="33dp"
+
+            android:layout_marginBottom="44dp"
+            android:text="height : "
+
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.442"
+            app:layout_constraintStart_toEndOf="@+id/imageViewDetail1"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="321dp"
+        android:layout_height="389dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:background="#FF5722"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.577"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
             android:id="@+id/textViewDetail6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="81dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="16dp"
             android:text="Team"
+            android:textColor="@color/black"
             android:textSize="20dp"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.291"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
         <TextView
-            android:layout_marginTop="16dp"
             android:id="@+id/textViewDetail7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="abbreviation"
-
+            android:layout_width="177dp"
+            android:layout_height="40dp"
             android:layout_below="@+id/textViewDetail6"
-            />
+
+            android:layout_marginTop="24dp"
+            android:text="abbreviation"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDetail8" />
+
         <TextView
-            android:layout_marginTop="16dp"
             android:id="@+id/textViewDetail8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="city"
-
+            android:layout_width="68dp"
+            android:layout_height="42dp"
             android:layout_below="@+id/textViewDetail7"
-            />
+
+            android:layout_marginTop="36dp"
+            android:text="city"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.281"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDetail10" />
+
         <TextView
-            android:layout_marginTop="16dp"
             android:id="@+id/textViewDetail9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="conference"
-
+            android:layout_width="109dp"
+            android:layout_height="41dp"
             android:layout_below="@+id/textViewDetail8"
-            />
-        <TextView
-            android:layout_marginTop="16dp"
-            android:id="@+id/textViewDetail10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="division"
-            android:layout_below="@+id/textViewDetail9"
-            />
 
-    </RelativeLayout>
-</RelativeLayout>
+            android:layout_marginTop="48dp"
+            android:text="conference"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.339"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDetail6" />
+
+        <TextView
+            android:id="@+id/textViewDetail10"
+            android:layout_width="71dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textViewDetail9"
+            android:layout_marginTop="44dp"
+            android:text="division"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.288"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDetail9" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

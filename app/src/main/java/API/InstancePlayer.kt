@@ -26,11 +26,12 @@ class InstancePlayer {
         var playerApi = retrofit.create(APIService::class.java)
         return playerApi
     }
-//player
-private var retrofit2 = Retrofit.Builder()
-    .baseUrl(url)
-    .addConverterFactory(GsonConverterFactory.create())
-    .build()
+
+    //player
+    private var retrofit2 = Retrofit.Builder()
+        .baseUrl(url)
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
 
 
     fun getPlayerAPI2(): APIService? {
@@ -69,19 +70,19 @@ private var retrofit2 = Retrofit.Builder()
 
         var playerApi = this.getPlayerAPI2()
 
-        var call = playerApi?.getPlayer("/api/v1/players/"+ idPlayer)
+        var call = playerApi?.getPlayer("/api/v1/players/" + idPlayer)
 
         if (call != null) {
             call.enqueue(object : Callback<Player> {
                 override fun onResponse(call: Call<Player>, response: Response<Player>) {
-                    var p : Player? =  response.body()
+                    var p: Player? = response.body()
                     if (p != null) {
                         myResultListener.onData(p)
                     }
                 }
 
                 override fun onFailure(call: Call<Player>, t: Throwable) {
-                    TODO("Not yet implemented")
+                    myResultListener.onFailed()
                 }
             })
 

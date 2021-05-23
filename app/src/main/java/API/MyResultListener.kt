@@ -8,6 +8,6 @@ interface MyResultListener {
 }
 
 interface MyResultListener2 {
-    public fun onData(players : Player)
+    public fun onData(player : Player)
     public fun onFailed();
 }

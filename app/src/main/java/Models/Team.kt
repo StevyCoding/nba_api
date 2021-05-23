@@ -3,10 +3,11 @@ package Models
 data class Team(
     var id: Int? = null,
     var abbreviation: String? = null,
-    var conference:String?,
-    var division:String?,
-    var full_name: String?,
-    var name:String?
+    var city: String? = null,
+    var conference:String? = null,
+    var division:String? =null,
+    var full_name: String? = null,
+    var name:String? =null
 ) {
 
 }
