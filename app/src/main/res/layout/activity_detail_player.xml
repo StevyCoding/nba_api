@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="10dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".PlayerListActivity"
+    >
+
+
+    <ImageView
+
+        android:id="@+id/imageViewDetail1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:layout_marginLeft="16dp"
+
+        android:id="@+id/textViewDetail1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="first name :"
+        android:layout_toRightOf="@+id/imageViewDetail1"
+        />
+
+    <TextView
+        android:layout_marginLeft="16dp"
+        android:id="@+id/textViewDetail2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="last name :"
+        android:layout_below="@+id/textViewDetail1"
+        android:layout_toRightOf="@+id/imageViewDetail1"
+
+        />
+
+    <TextView
+        android:layout_marginLeft="16dp"
+        android:id="@+id/textViewDetail3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="team : "
+        android:layout_below="@+id/textViewDetail2"
+        android:layout_toRightOf="@+id/imageViewDetail1"
+        />
+    <TextView
+        android:layout_marginLeft="60dp"
+        android:id="@+id/textViewDetail4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="postion : "
+        android:layout_toRightOf="@+id/textViewDetail1"
+        />
+    <TextView
+        android:layout_marginLeft="60dp"
+        android:id="@+id/textViewDetail5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="height : "
+        android:layout_toRightOf="@+id/textViewDetail1"
+        android:layout_below="@+id/textViewDetail1"
+        />
+    <TextView
+        android:layout_marginLeft="60dp"
+        android:id="@+id/textViewDetail11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="weight : "
+        android:layout_toRightOf="@+id/textViewDetail1"
+        android:layout_below="@+id/textViewDetail2"
+        />
+    <RelativeLayout
+        android:layout_width="40mm"
+        android:layout_height="50mm"
+        android:layout_below="@+id/imageViewDetail1"
+        android:gravity="center_vertical">
+
+        >
+        <TextView
+            android:layout_marginTop="16dp"
+            android:id="@+id/textViewDetail6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:layout_marginTop="16dp"
+            android:id="@+id/textViewDetail7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="abbreviation"
+
+            android:layout_below="@+id/textViewDetail6"
+            />
+        <TextView
+            android:layout_marginTop="16dp"
+            android:id="@+id/textViewDetail8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="city"
+
+            android:layout_below="@+id/textViewDetail7"
+            />
+        <TextView
+            android:layout_marginTop="16dp"
+            android:id="@+id/textViewDetail9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="conference"
+
+            android:layout_below="@+id/textViewDetail8"
+            />
+        <TextView
+            android:layout_marginTop="16dp"
+            android:id="@+id/textViewDetail10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="division"
+            android:layout_below="@+id/textViewDetail9"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
